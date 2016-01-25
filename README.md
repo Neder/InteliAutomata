@@ -4,3 +4,5 @@
 변환 코드는 http://www.theyt.net/wiki/한영타변환기 에 사용된 JavaScript 변환 코드를 Java로 포팅했습니다.
 
 ~~어째 Inteli하지 않은 것 같아~~
+
+안내: 이 변환 코드는 GPL로 배포됩니다.
