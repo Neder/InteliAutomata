@@ -1,61 +1,61 @@
-package me.neder.InteliAutomata;
+package me.neder.inteliautomata;
 
-import java.io.UnsupportedEncodingException;
-import java.util.regex.Pattern;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import me.neder.InteliAutomata.engtokor;
-
+/**
+ * The class used to convert alphabet input into hangul.
+ * @author Neder
+ * @author Final Child
+ * @since 0.1.0
+ */
 public class InteliAutomata {
 	
-	public static void main(String[] args) throws UnsupportedEncodingException {
-		InteliAutomata ia = new InteliAutomata();
-		String input = "audfuddj /spawn dmf dlqfurgktpdy";
-		String result = ia.converter(input);
-		System.out.println(result);
-	}
-	
 	/**
-	 * 메인 메서드
+	 * Automatically checks whether the alphabet input should be converted and converts it into hangul.
 	 * 
-	 * @param str
-	 * @return
+	 * @param str the string to convert
+	 * @return the converted string
+     * @since 0.1.0
 	 */
-	private String converter(String str) {
-		engtokor ek = new engtokor();
-		
-		StringBuffer sb = new StringBuffer();
+	@NotNull
+    public static String convert(String str) {
+		StringBuilder sb = new StringBuilder();
 		String[] strsplit = str.split(" ");
 		Pattern pattern = Pattern.compile("(ㄱ|ㄲ|ㄳ|ㄴ|ㄵ|ㄶ|ㄷ|ㄹ|ㄺ|ㄻ|ㄼ|ㄽ|ㄾ|ㄿ|ㅀ|ㅁ|ㅂ|ㅄ|ㅅ|ㅆ|ㅇ|ㅈ|ㅊ|ㅋ|ㅌ|ㅍ|ㅎ|ㄸ|ㅃ|ㅉ|ㅏ|ㅐ|ㅑ|ㅒ|ㅓ|ㅔ|ㅕ|ㅖ|ㅗ|ㅘ|ㅙ|ㅚ|ㅛ|ㅜ|ㅝ|ㅞ|ㅟ|ㅠ|ㅡ|ㅢ|ㅣ)");
-		
-		for(int i = 0; i < strsplit.length; i++) {
-			String converted = ek.engToKor(strsplit[i]);
+
+        for (String aStrsplit : strsplit) {
+            String converted = Converter.convert(aStrsplit);
 //			System.out.println(converted); // test
-			Matcher matcher = pattern.matcher(converted);
-			
-			if (matcher.find()) { // 조합 안 된 글자가 있으면
-				
-				if (customRules(converted)) { // 커스텀 변환 대상일 경우
-					sb.append(converted);
-				} else {
-					sb.append(strsplit[i]); // 원래 값 그대로 집어넣기
-				}
-				
-			} else { // 모든 글자가 정상적으로 조합된 글자라면
-				sb.append(converted); // 변환된 글자를 출력한다
-			}
-			sb.append(" ");
-		}
+            Matcher matcher = pattern.matcher(converted);
+
+            if (matcher.find()) { // 조합 안 된 글자가 있으면
+
+                if (checkString(converted)) { // 커스텀 변환 대상일 경우
+                    sb.append(converted);
+                } else {
+                    sb.append(aStrsplit); // 원래 값 그대로 집어넣기
+                }
+
+            } else { // 모든 글자가 정상적으로 조합된 글자라면
+                sb.append(converted); // 변환된 글자를 출력한다
+            }
+            sb.append(" ");
+        }
 		
 		return sb.toString();
 	}
-	
+
 	/**
-	 * 커스텀 패턴을 체크해서 일치하는지를 반환하는 메서드
-	 * @param str
-	 * @return
+     * Checks the string and returns whether it should be converted.
+     *
+	 * @param str the string to be checked
+	 * @return whether it should be converted
+     * @since 0.1.0
 	 */
-	private boolean customRules(String str) {
+    private static boolean checkString(String str) {
 		// Pattern 1 - 변환 금지할 단어 사전 정의(...)
 		Pattern dic = Pattern.compile("(to|spawn)"); // 추가하자...
 		Matcher dicm = dic.matcher(str);
@@ -76,7 +76,7 @@ public class InteliAutomata {
 		}
 		
 		// Pattern 3 - ㅇㅅㅇㅅㅇㅅㅇ 등 두 키를 반복해서 누르는 경우
-		int half = (int) str.length() / 2; // 반으로 나누고 소수점이 있는 경우(홀수) 버림
+		int half = str.length() / 2; // 반으로 나누고 소수점이 있는 경우(홀수) 버림
 		String[] checkes = new String[half];
 		for(int i = 0; i < half; i++) {
 			char char1 = str.charAt(i * 2);

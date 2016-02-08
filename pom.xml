@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>neder.me</groupId>
+  <artifactId>inteliautomata</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations-java5</artifactId>
+      <version>15.0</version>
+    </dependency>
+  </dependencies>
+  <packaging>jar</packaging>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <name>InteliAutomata</name>
+  <description>Converts alphabet inputs into hangul</description>
+  <url>https://github.com/Neder/InteliAutomata</url>
+  <inceptionYear>2016</inceptionYear>
+  <licenses>
+    <license>
+      <name>GNU General Public License, Version 3</name>
+      <url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+      <distribution>repo</distribution>
+      <comments>We are GPL</comments>
+    </license>
+  </licenses>
+  <organization>
+    <name>Epic Planet Minecraft Server</name>
+    <url>https://epicpla.net/</url>
+  </organization>
+  <developers>
+    <developer>
+      <id>Neder</id>
+      <name>Neder</name>
+      <email>neder@epicpla.net</email>
+      <url>http://neder.me</url>
+      <organization>Epic Planet Minecraft Server</organization>
+      <organizationUrl>https://epicpla.net/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>Asia/Seoul</timezone>
+    </developer>
+  </developers>
+  <contributors>
+    <contributor>
+      <name>Final Child</name>
+      <email>finalchild@epicpla.net</email>
+      <url>https://github.com/fcreloaded</url>
+      <organization>Epic Planet Minecraft Server</organization>
+      <organizationUrl>https://epicpla.net/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>Asia/Seoul</timezone>
+    </contributor>
+  </contributors>
+
+  <issueManagement>
+    <system>Github</system>
+    <url>https://github.com/Neder/InteliAutomata/issues</url>
+  </issueManagement>
+  <scm>
+    <connection>scm:git:https://github.com/Neder/InteliAutomata.git</connection>
+    <developerConnection>scm:git:https://github.com/Neder/InteliAutomata.git</developerConnection>
+    <tag>HEAD</tag>
+    <url>https://github.com/Neder/InteliAutomata</url>
+  </scm>
+</project>

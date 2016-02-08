@@ -1,63 +1,39 @@
-*.class
+# Eclipse stuff
+.classpath
+.project
+.settings/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# netbeans
+nbproject/
+nbactions.xml
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# we use maven!
+build.xml
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# maven
+target/
+dependency-reduced-pom.xml
 
-# =========================
-# Operating System Files
-# =========================
+# vim
+.*.sw[a-p]
 
-# OSX
-# =========================
+# various other potential build files
+build/
+bin/
+dist/
+manifest.mf
 
-.DS_Store
-.AppleDouble
-.LSOverride
+# Mac filesystem dust
+.DS_Store/
 
-# Thumbnails
-._*
+# intellij
+*.iml
+*.ipr
+*.iws
+.idea/
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
+# other files
+*.log*
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Windows
-# =========================
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
+# delombok
+*/src/main/lombok
