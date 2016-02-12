@@ -6,7 +6,7 @@
 
   <groupId>neder.me</groupId>
   <artifactId>inteliautomata</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <dependencies>
     <dependency>
       <groupId>org.jetbrains</groupId>
