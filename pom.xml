@@ -6,20 +6,8 @@
 
   <groupId>neder.me</groupId>
   <artifactId>inteliautomata</artifactId>
-  <version>1.0.0</version>
-  <dependencies>
-    <dependency>
-      <groupId>org.jetbrains</groupId>
-      <artifactId>annotations-java5</artifactId>
-      <version>15.0</version>
-    </dependency>
-  </dependencies>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
-  <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
 
   <name>InteliAutomata</name>
   <description>Converts alphabet inputs into hangul</description>
@@ -33,10 +21,7 @@
       <comments>We are GPL</comments>
     </license>
   </licenses>
-  <organization>
-    <name>Epic Planet Minecraft Server</name>
-    <url>https://epicpla.net/</url>
-  </organization>
+
   <developers>
     <developer>
       <id>Neder</id>
@@ -51,6 +36,11 @@
       <timezone>Asia/Seoul</timezone>
     </developer>
   </developers>
+  <organization>
+    <name>Epic Planet Minecraft Server</name>
+    <url>https://epicpla.net/</url>
+  </organization>
+
   <contributors>
     <contributor>
       <name>Final Child</name>
@@ -65,14 +55,28 @@
     </contributor>
   </contributors>
 
-  <issueManagement>
-    <system>Github</system>
-    <url>https://github.com/Neder/InteliAutomata/issues</url>
-  </issueManagement>
   <scm>
     <connection>scm:git:https://github.com/Neder/InteliAutomata.git</connection>
     <developerConnection>scm:git:https://github.com/Neder/InteliAutomata.git</developerConnection>
     <tag>HEAD</tag>
     <url>https://github.com/Neder/InteliAutomata</url>
   </scm>
+  <issueManagement>
+    <system>Github</system>
+    <url>https://github.com/Neder/InteliAutomata/issues</url>
+  </issueManagement>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations-java5</artifactId>
+      <version>15.0</version>
+    </dependency>
+  </dependencies>
 </project>
