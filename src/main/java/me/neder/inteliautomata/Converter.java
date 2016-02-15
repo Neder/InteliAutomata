@@ -1,4 +1,7 @@
 /*
+ * InteliAutomata - Converts alphabet inputs into hangul.
+ * Copyright (C) 2016 Neder
+ *
  * This file is part of InteliAutomata.
  *
  * InteliAutomata is free software: you can redistribute it and/or modify
