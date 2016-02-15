@@ -26,13 +26,17 @@
 
   <groupId>neder.me</groupId>
   <artifactId>inteliautomata</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
 
   <name>InteliAutomata</name>
   <description>Converts alphabet inputs into hangul.</description>
   <url>https://github.com/Neder/InteliAutomata</url>
   <inceptionYear>2016</inceptionYear>
+  <organization>
+    <name>Epic Planet Minecraft Server</name>
+    <url>https://epicpla.net/</url>
+  </organization>
   <licenses>
     <license>
       <name>GNU General Public License, Version 3</name>
@@ -56,10 +60,6 @@
       <timezone>Asia/Seoul</timezone>
     </developer>
   </developers>
-  <organization>
-    <name>Epic Planet Minecraft Server</name>
-    <url>https://epicpla.net/</url>
-  </organization>
 
   <contributors>
     <contributor>
